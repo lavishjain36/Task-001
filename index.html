@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Admin Chart Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav_icon" onclick="toggleSidebar()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="navbar_left">
+                <a href="#">Subscriber</a>
+                <a href="#">Video Managment</a>
+                <a href="#" class="active_link">Admin</a>
+            </div>
+            <div class="navbar_right">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-clock-o"></i>
+                </a>
+                <a href="#">
+                    <img src="./img/user-icon.png" alt="avatar1" width="30"> 
+                </a>
+            </div>
+        </nav>
+
+        <!-- main container  -->
+        <main>
+            <div class="main_container">
+                <div class="main_title">
+                    <img src="./img/chair.png" alt="chair" width="100">
+                    <div class="main_greeting">
+                        <h1>Hello Coders</h1>
+                        <p>Welcome to your Admin Dashboard</p>
+                    </div>
+                </div>
+
+
+                <div class="main_cards">
+                    <div class="card">
+                        <i class="fa fa-user-o fa-2x text-primary"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Number of Subscribers</p>
+                            <span class="font-bold text-title">578</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa fa-calendar fa-2x text-red"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Times of Watching</p>
+                            <span class="font-bold text-title">2433</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa fa-video-camera fa-2x text-yellow"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Number of Videos</p>
+                            <span class="font-bold text-title">342</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa fa-thumbs-up fa-2x text-green"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Number of Likes</p>
+                            <span class="font-bold text-title">1214</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts">
+                    
+                    <div class="charts_left">
+                        <div class="charts_left_title">
+                            <div>
+                            <h1>Daily Reports</h1>
+                            <p>Benagluru</p> 
+                            </div>
+                          <i class="fa fa-usd"></i>
+                       </div>
+                        <div id="apex1"></div>
+                  </div>
+             
+                  <!-- closing of chart left  -->
+
+                <div class="charts_right">
+                    <div class="charts_right_title">
+                        <div>
+                            <h1>Stats Reports</h1>
+                            <p>Delhi</p>
+                        </div>
+                        <i class="fa fa-usd"></i>
+                    </div>
+                    <div class="charts_right_cards">
+                        
+                        <div class="card1">
+                            <h1>Income</h1>
+                            <p>$97,500</p>
+                        </div>
+                        <div class="card2">
+                            <h1>Sales</h1>
+                            <p>$2,41,750</p>
+                        </div>
+                        <div class="card3">
+                            <h1>Users</h1>
+                            <p>3000</p>
+                        </div>
+                        <div class="card4">
+                            <h1>Orders</h1>
+                            <p>800</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+ 
+    <!-- Container Sidebar  -->
+    <div id="sidebar">
+        <div class="sidebar_title">
+            <div class="sidebar_img">
+                <h1 id="sidebarh1">Codersup</h1>
+            </div>
+            <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+        </div>
+        <div class="sidebar_menu">
+            <div class="sidebar_link active_menu_link">
+                <i class="fa fa-home"></i>
+                <a href="#"></a>
+            </div>
+            <h2>MNG</h2>
+
+            <div class="sidebar_link">
+                <i class="fa fa-user-secret"></i>
+                <a href="#">Admin Managment</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-building"></i>
+                <a href="#">Company Managment</a>
+            </div>
+
+            
+
+            <div class="sidebar_link">
+                <i class="fa fa-wrench"></i>
+                <a href="#">Employee Management</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-archive"></i>
+                <a href="#">Warehouse</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-handshake-o"></i>
+                <a href="#">Contracts</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-question"></i>
+                <a href="#">Requests</a>
+            </div>
+            <div class="sidebar_link">
+                <i class="fa fa-sign-out"></i>
+                <a href="#">Leave policy</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-calendar"></i>
+                <a href="#">Special Days</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-files-o"></i>
+                <a href="#">Apply for leave</a>
+            </div>
+
+            <h2 >Payroll</h2>
+
+            
+            <div class="sidebar_link">
+                <i class="fa fa-money"></i>
+                <a href="#">Payroll</a>
+            </div>
+            <div class="sidebar_link">
+                <i class="fa fa-google-wallet"></i>
+                <a href="#">G-Pay</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-sign-out"></i>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <!-- close of sidebar  -->
+</div>
+<!-- close of entire container  -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="./script.js"></script>
+</body>
+
+</html>
